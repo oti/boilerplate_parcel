@@ -1,20 +1,17 @@
 @charset 'UTF-8';
 
 // scssコンパイル用メタファイル
-@import "config/var";
-@import "config/placeholder";
-@import "config/mixin";
-@import "config/function";
+@use "config/index";
 
 // ファンデーション
-@import "foundation/font";
-@import "foundation/reset";
-@import "foundation/base";
+@use "foundation/font";
+@use "foundation/reset";
+@use "foundation/base";
 
 // オブジェクト
-@import "object/Header";
-@import "object/ObservedBox";
-@import "object/Nav";
+@use "object/Header";
+@use "object/ObservedBox";
+@use "object/Nav";
 
 // ユーティリティー
-@import "utility/visibilityHidden";
+@use "utility/visibilityHidden";
