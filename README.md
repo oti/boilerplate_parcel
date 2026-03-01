@@ -5,7 +5,7 @@
 dependencies の過不足は適宜処理してください。
 
 - HTML: Pug
-- CSS: node-sass, Autoprefixer
+- CSS: Sass v4(Dart Sass), Autoprefixer
 - JS: TypeScript + Babel
 
 Parcel がポリフィル指定をよしなにしてくれているので .babelrc ファイルは不要です。
@@ -14,7 +14,7 @@ Parcel がポリフィル指定をよしなにしてくれているので .babel
 
 ## development
 
-Node.js v18.15.0 が必要です。
+Node.js v24.14.0 が必要です。
 
 ```bash
 npm ci
@@ -34,7 +34,7 @@ npm run build
 ## test
 
 ```bash
-npm run test
+npm test
 ```
 
 - markuplint
