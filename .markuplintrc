@@ -1,54 +1,100 @@
 {
   "rules": {
-    "attr-duplication": true,
+    "no-duplicate-attr": true,
     "attr-value-quotes": true,
     "case-sensitive-attr-name": true,
     "case-sensitive-tag-name": true,
-    "character-reference": true,
-    "deprecated-attr": true,
-    "deprecated-element": true,
-    "disallowed-element": [],
-    "doctype": true,
-    "end-tag": true,
-    "id-duplication": true,
-    "ineffective-attr": true,
-    "invalid-attr": true,
+    "no-malformed-character-reference": true,
+    "no-unescaped-char": true,
+    "no-obsolete-attr": true,
+    "no-deprecated-attr": true,
+    "no-obsolete-element": true,
+    "no-deprecated-element": true,
+    "no-restricted-element": [],
+    "require-doctype": true,
+    "no-obsolete-doctype": true,
+    "require-end-tag": true,
+    "no-duplicate-id": true,
+    "no-ineffective-attr": true,
+    "no-unknown-attr": true,
+    "no-disallowed-attr": true,
+    "no-invalid-attr-value": true,
     "label-has-control": true,
-    "landmark-roles": {
+    "no-nested-top-level-landmark": {
       "options": {
         "ignoreRoles": ["complementary"]
       }
     },
+    "require-landmark-label": true,
     "no-boolean-attr-value": false,
     "no-default-value": true,
     "no-empty-palpable-content": true,
-    "no-hard-code-id": true,
+    "no-hardcoded-id": true,
     "no-refer-to-non-existent-id": true,
-    "no-use-event-handler-attr": true,
+    "no-event-handler-attr": true,
     "permitted-contents": true,
-    "required-attr": true,
-    "required-element": [],
-    "required-h1": true,
-    "use-list": [],
-    "wai-aria": true
+    "require-attr": true,
+    "require-element": [],
+    "require-h1": true,
+    "no-duplicate-h1": true,
+    "no-pseudo-list": [],
+    "no-aria-on-unsupported-element": true,
+    "no-unknown-role": true,
+    "no-abstract-role": true,
+    "require-parent-role": true,
+    "require-aria-prop": true,
+    "no-deprecated-role": true,
+    "no-redundant-role": true,
+    "permitted-roles": true,
+    "no-prohibited-naming": true,
+    "element-supports-aria-prop": true,
+    "role-supports-aria-prop": true,
+    "no-deprecated-aria-prop": true,
+    "no-redundant-aria-prop": true,
+    "no-contradictory-aria-prop": true,
+    "no-invalid-aria-prop-value": true,
+    "no-default-aria-value": true,
+    "aria-prop-requires-role": true,
+    "require-owned-elements": true,
+    "no-aria-on-presentational-children": true,
+    "no-focusable-in-aria-hidden": true,
+    "tab-requires-tabpanel": true
   },
   "nodeRules": [
     {
       "selector": "meta[property]",
       "rules": {
-        "invalid-attr": {
+        "no-unknown-attr": {
           "options": {
-            "attrs": {
+            "allowAttrs": {
               "property": {
                 "pattern": "/^og:.+/"
               },
-              "content": {
-                "type": "NoEmptyAny"
-              }
+              "content": "NoEmptyAny"
             }
           }
         },
-        "required-attr": false
+        "no-disallowed-attr": {
+          "options": {
+            "allowAttrs": {
+              "property": {
+                "pattern": "/^og:.+/"
+              },
+              "content": "NoEmptyAny"
+            }
+          }
+        },
+        "no-invalid-attr-value": {
+          "options": {
+            "allowAttrs": {
+              "property": {
+                "pattern": "/^og:.+/"
+              },
+              "content": "NoEmptyAny"
+            }
+          }
+        },
+        "require-attr": false
       }
     }
   ]
