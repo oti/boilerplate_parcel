@@ -14,7 +14,7 @@ Parcel がポリフィル指定をよしなにしてくれているので .babel
 
 ## development
 
-Node.js v24.14.0 が必要です。
+Node.js v26.12.1 が必要です。
 
 ```bash
 npm ci
